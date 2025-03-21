@@ -9,7 +9,7 @@ const { dbConnect } = require('./utils/db');
 app.use(express.json());
 
 app.use(cors({
-    origin: "https://chatapp-omega-lemon.vercel.app",
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
