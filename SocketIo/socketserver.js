@@ -8,7 +8,7 @@ const server = createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://chatapp-omega-lemon.vercel.app", 
+    origin: "https://chatapp-dun-chi.vercel.app", 
     methods: ["GET", "POST"],
     credentials: true,
   },
