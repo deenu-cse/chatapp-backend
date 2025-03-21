@@ -8,11 +8,12 @@ const server = createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: "https://chatapp-omega-lemon.vercel.app", 
     methods: ["GET", "POST"],
     credentials: true,
   },
 });
+
 
 const peerServer = ExpressPeerServer(server, {
   debug: true
