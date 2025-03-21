@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const { io, app, server } = require('./SocketIo/socketserver')
 const cors = require('cors')
@@ -16,6 +17,8 @@ app.get('/', (req, res) => {
 
 dbConnect();
 
-server.listen(9000, () => {
+const port = process.env.PORT
+
+server.listen(port, () => {
     console.log("Server is running at 9000");
 })
