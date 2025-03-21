@@ -1,7 +1,7 @@
 const { genToken } = require("../helpers/gentoken");
 const Conversation = require("../models/conversationModel");
 const User = require("../models/userModel");
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const { io } = require('../SocketIo/socketserver')
 
 const SignUp = async (req, res) => {
