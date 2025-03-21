@@ -77,6 +77,7 @@ const Login = async (req, res) => {
 const getChatUsers = async (req, res) => {
     try {
         const loggedInUser = req.query.userId;
+        console.log(loggedInUser);
 
         const users = await User.find({ _id: { $ne: loggedInUser } }).select("-password");
 
